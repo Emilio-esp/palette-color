@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    border: none;
+}
+
+/* palette box styles */
+
+.palette_container{
+    display: flex;
+    height: 80vh;
+}
+
+.palette__box{
+    flex:1;
+    background-color: #5185b2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.palette__value {
+    cursor: pointer;
+}
+
+.palette__color-option {
+    display: flex;
+    flex-direction: column;
+}
+
+.palette__color-option .btn {
+    padding: 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* palette Change Color styles */
+
+.palette__chagenColor {
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    height: 10em;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.close-palette {
+    padding: 0.4em;
+    font-size: 0.8em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgba(0,0,0,0.8);
+    cursor: pointer;
+    color: white;
+}
+
+.change-color__slider {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 1.5em;
+    background: red;
+    border-radius: 10px;
+    margin: 0.8em 0;
+}
+
+.change-color__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0.8em;
+  height: 0.8em;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+input[type="range"]:focus{
+    outline: none;
+}
+
+.change-color__slider::-moz-range-thumb {
+  width: 0.8em;
+  height: 0.8em;
+  background: white;
+  cursor: pointer;
+}
+
+/* palette box options styles */
+
+.palette-tools {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vh;
+}
+
+.pallete-tools-btn {
+    padding: 1em 2em;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    margin: 0.5em;
+}
+
+.palette-tools__option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Modal styles*/
+
+.modal__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal__content {
+    background-color: white;
+    min-height: 40vh;
+    min-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    cursor: pointer;
+}
+
+.modal__content input {
+    padding: .6em;
+    margin: 1.5em 0 0.5em 0;
+    font-size: 1.2em;
+}
+
+.modal__content #savePaletteModal {
+    padding: 0.8em 2em;
+    margin: 1em;
+    border-radius: 5px;
+    background-color: #5185b2;
+    color:white;
+}
+
+.modal__content input:focus {
+    outline: none;
+}
+
+/* palette Library */
+
+.library__item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1em 3em;
+}
+
+.library__item h3{
+    flex: 1;
+    margin-top: 1em;
+}
+
+.library__item-colors {
+    display: flex;
+    flex-direction: row;
+}
+
+.library__item-color {
+    width: 2em;
+    height: 3em;
+}
+
+.open-library {
+    background-color: rgba(0,0,0,0.8);
+    padding: 0.5em;
+    color: white; 
+
+}
