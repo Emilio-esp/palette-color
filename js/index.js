@@ -223,7 +223,7 @@ class Palette {
         }   
     }
 
-    copyColor (e) {
+    copyColor ( e ) {
         let colorValue = e.target.innerText;
 
         let inputEl = document.createElement("input");
@@ -232,6 +232,19 @@ class Palette {
         inputEl.select();
         document.execCommand('copy');
         document.body.removeChild(inputEl);
+
+        let messageSuccessHtml = `
+            <div class="message-success">
+                <i class="icon-success far fa-thumbs-up"></i>
+                <h3>Color copied At the clipboard</h3>
+            </div>
+        `;
+
+        this.buildModal(messageSuccessHtml);
+
+        setTimeout(() => {
+            this.HandleCloseModal()
+        }, 1000);
     }
 
     setPaletteColors (arrColors = null) {
@@ -393,20 +406,20 @@ myPalette.showLibrarybtn.addEventListener('click', function() {
 
 // add Event listeners
 
-Array.from(myPalette.colorValEl).forEach(onePalette => {
-    onePalette.addEventListener('click',function(e){
+Array.from( myPalette.colorValEl ).forEach( itemPallete => {
+    itemPallete.addEventListener('click',function( e ){
         myPalette.copyColor(e);
     })
 })
 
-Array.from(myPalette.colorBlockEls).forEach(onePalette => {
-    onePalette.addEventListener('click',function(e){
-        myPalette.blockColor(e);
+Array.from( myPalette.colorBlockEls ).forEach( itemPallete => {
+    itemPallete.addEventListener('click',function( e ){
+        myPalette.blockColor( e );
     })
 })
 
-Array.from(myPalette.changeValueCurrentColorEl).forEach(currentPaletteContainer => {
-    currentPaletteContainer.addEventListener('click',function(e){
-        myPalette.changeColorCurrentItem(e);
+Array.from( myPalette.changeValueCurrentColorEl ).forEach( currentPaletteContainer => {
+    currentPaletteContainer.addEventListener('click', function( e ){
+        myPalette.changeColorCurrentItem( e );
     })
 })
