@@ -211,14 +211,14 @@ class Palette {
     blockColor(e) {
         let iconBlock = e.target;
 
-        if (iconBlock.classList.contains('fa-unlock')) {
+        if (iconBlock.classList.contains('fa-lock-open')) {
 
-            iconBlock.classList.remove('fa-unlock');
+            iconBlock.classList.remove('fa-lock-open');
             iconBlock.classList.add('fa-lock');
             iconBlock.parentElement.parentElement.classList.add('lock-color')    
         } else {
             iconBlock.classList.remove('fa-lock');
-            iconBlock.classList.add('fa-unlock');
+            iconBlock.classList.add('fa-lock-open');
             iconBlock.parentElement.parentElement.classList.remove('lock-color')    
         }   
     }
